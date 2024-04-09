@@ -47,8 +47,8 @@ Considering the user stories:
 
 ### Testing strategy mind map
 - **US-0001** <br>
-  ![US-0001](URL_da_Imagem)
+  ![US-0001](img_readme/US-0001.png)
 - **US-0002** <br>
-  ![US-0002](URL_da_Imagem)
+  ![US-0002](img_readme/US-0002.png)
 - **US-0003** <br>
-  ![US-0003](URL_da_Imagem)
+  ![US-0003](img_readme/US-0003.png)
