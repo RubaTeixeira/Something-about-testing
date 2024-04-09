@@ -46,9 +46,9 @@ Considering the user stories:
   > + Coupon name cannot be repeated 
 
 ### Testing strategy mind map
-- **US-0001**
-  
-- **US-0002**
-  
-- **US-0003**
-  
+- **US-0001** <br>
+  ![US-0001](URL_da_Imagem)
+- **US-0002** <br>
+  ![US-0002](URL_da_Imagem)
+- **US-0003** <br>
+  ![US-0003](URL_da_Imagem)
