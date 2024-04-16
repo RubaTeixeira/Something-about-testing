@@ -1,12 +1,12 @@
 # Something about testing 
 :construction: Project in progress :construction:
 
-### Abstract
+## Abstract
 The main objective of this project is to show my skills in static and dynamic testing processes, based on an activity proposed in the Software Testing course at EBAC.
 
 About the course, [click here](https://ebaconline.com.br/qualidade-de-software)
 
-### Proposition
+## Proposition
 
 Considering the user stories: 
 - **US-0001** - Add item to cart <br>
@@ -43,10 +43,42 @@ Considering the user stories:
   >   * Description
   > + Coupon name cannot be repeated 
 
-### Testing strategy mind map
+## Testing strategy mind map
 - **US-0001** <br>
   ![US-0001](img_readme/US-0001.png)
 - **US-0002** <br>
   ![US-0002](img_readme/US-0002.png)
 - **US-0003** <br>
   ![US-0003](img_readme/US-0003.png)
+
+## Test execution
+### Static Test
+- Acceptance Criteria
+  + **US-0001**
+  + **US-0002**
+  + **US-0003**
+
+- Test Cases
+  + **US-0001**
+  + **US-0002**
+  + **US-0003**
+
+### Dynamic Test
+- Web
+  + **US-0001**
+  + **US-0002**
+
+- Mobile
+  + **US-0001**
+  + **US-0002**
+
+- API
+  + **US-0003**
+
+## Tools  
+<br>
+<a href="https://www.cypress.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/6e46ec1fc23b60c8fd0d2f2ff46db82e16dbd75f/icons/cypress.svg" alt="cypress" width="40" height="40"/> </a> &nbsp;
+<a href="https://www.appium.io/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/appium/appium/master/packages/appium/docs/assets/images/appium-logo-horiz.png" alt="appium" width="180" height="40"/> </a> &nbsp;
+<a href="https://https://jmeter.apache.org/" target="_blank" rel="noreferrer"> <img src="https://jmeter.apache.org/images/logo.svg" alt="jmeter" width="120" height="40"/> </a> &nbsp;
+<a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> &nbsp;
+<a href="https://www.jenkins.io" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="jenkins" width="40" height="40"/> </a> &nbsp;
