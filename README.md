@@ -15,10 +15,10 @@ Considering the user stories:
    **To** purchase items <br>
   > 
   > **Business rules:** 
-  > + No more than 10 items of the same product may be added to the cart;
-  > + Values cannot exceed R$990.00;
-  > + Amounts between R$ 200 and R$ 600 get a 10% coupon 
-  > + Amounts over R$ 600 get a 15% coupon
+  > + Do not allow products to be added to the cart above stock availability; 
+  > + Block adding out-of-stock products to the cart;
+  > + Allow changing the quantity of products in the cart; 
+  > + Must only accept valid discount coupons.
  
 - **US-0002** - Login to the platform <br>
   > **As** an EBAC-SHOP customer <br>
@@ -28,8 +28,7 @@ Considering the user stories:
   > **Business rules:** 
   > + Only active users can log in;
   > + An error message must be displayed if the user enters the wrong login and password;
-  > + Login must allow e-mail, username or national ID; 
-  > + If the user misses the password 3 times, the login must be locked for 15 minutes.
+  > + Login must allow e-mail or username.
    
 - **US-0003** - Coupon API <br>
   > **As** an EBAC-SHOP admin <br>
@@ -37,7 +36,6 @@ Considering the user stories:
    **To** be able to list and register coupons <br>
   > 
   > **Business rules:** 
-  > + Must list all registered coupons or list by coupon ID;
   > + You must register the coupons with the mandatory fields below:
   >   * Coupon code
   >   * Value
