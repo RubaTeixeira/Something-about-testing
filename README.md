@@ -16,8 +16,7 @@ Considering the user stories:
   > 
   > **Business rules:** 
   > + Do not allow products to be added to the cart above stock availability; 
-  > + Block adding out-of-stock products to the cart;
-  > + Allow changing the quantity of products in the cart; 
+  > + Block adding out-of-stock products to the cart; 
   > + Must only accept valid discount coupons.
  
 - **US-0002** - Login to the platform <br>
@@ -30,14 +29,14 @@ Considering the user stories:
   > + An error message must be displayed if the user enters the wrong login and password;
   > + Login must allow e-mail or username.
    
-- **US-0003** - Coupon API <br>
+- **US-0003** - Voucher API <br>
   > **As** an EBAC-SHOP admin <br>
-   **I want** create a coupon service <br> 
-   **To** be able to list and register coupons <br>
+   **I want** create a voucher service <br> 
+   **To** be able to list and register vouchers <br>
   > 
   > **Business rules:** 
-  > + You must register the coupons with the mandatory fields below:
-  >   * Coupon code
+  > + You must register the vouchers with the mandatory fields below:
+  >   * Voucher code
   >   * Value
   >   * Discount type
   >   * Description
