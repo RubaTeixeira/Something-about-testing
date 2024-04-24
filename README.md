@@ -99,7 +99,49 @@ I chose to use the ***Gherkin*** language to write the acceptance criteria, docu
     ![US0001TC02](img_readme/US001TC02.png)
 
   - **US-0002** <br>
+    For this user story, we have the following rules: <br>
+    a. Only active users can log in; <br>
+    b. An error message must be displayed if the user enters the wrong login and password; <br>
+    c. Login must allow e-mail or username. <br>
+    Just to illustrate the login dynamics, I've used the simplified decision tables for each scenario:
+    - Access with e-mail <br>
+      ![Condition1](img_readme/US002Conditional1.png) 
+    - Access with username <br>
+      ![Condition1](img_readme/US002Conditional2.png) 
+    
+    From this, defining the test case: <br>
+    
+    **CT01 - Login testing** <br>
+    **Description:** Test access with email, or username and password <br>
+    **Preconditions:** User already registered <br>
+    **Required parameters:** Massive data with email, password and username <br>
+    **Actions:** <br>
+    1- Access login page <br>
+    2- Enter email or username and password <br>
+    3- Click on the Login button <br>
+    **Expected results:** <br>
+    ![US002TC01](img_readme/US002TC01.png)
+    
   - **US-0003** <br>
+    For this last user story, apart from the indication of fields to fill in, we only have a very simple rule: <br>
+    a. Coupon name cannot be repeated. <br>
+    
+    Visualizing the rule, we have: <br>
+    ![US0003Conditional](img_readme/US003Conditional1.png)
+
+    So I wrote the test case like this: <br>
+
+    **CT01 - Create voucher code** <br>
+    **Description:** Test creation of voucher for discount on purchases. <br>
+    **Preconditions:** Have administrator password, single name voucher <br>
+    **Required parameters:** Voucher code, Amount, Discount type, description <br>
+    **Actions:** <br>
+    1- Access the API <br>
+    2- List existing vouchers <br>
+    3- Enter new voucher details <br>
+    4- Register new voucher <br>
+    **Expected results:** <br>
+    ![US0003TC01](img_readme/US003TC01.png)
 
 ### Dynamic Test
 
@@ -116,8 +158,11 @@ I chose to use the ***Gherkin*** language to write the acceptance criteria, docu
 - API
   - **US-0003**
 
-## Tools
+## Performance Testing
 
+## Continuous Integration
+
+## Tools
 <br>
 <a href="https://www.cypress.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/6e46ec1fc23b60c8fd0d2f2ff46db82e16dbd75f/icons/cypress.svg" alt="cypress" width="40" height="40"/> </a> &nbsp;
 <a href="https://www.appium.io/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/appium/appium/master/packages/appium/docs/assets/images/appium-logo-horiz.png" alt="appium" width="180" height="40"/> </a> &nbsp;
