@@ -1,0 +1,16 @@
+{
+  "name": "c",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "cy:dash": "npx cypress run --record --key 24e3bc5d-83f0-4e97-96e7-5d2b228e6e8b"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "cypress": "^13.6.0"
+  }
+}

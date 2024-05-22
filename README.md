@@ -14,7 +14,7 @@ Considering the user stories:
 
 - **US-0001** - Add item to cart <br>
 
-  > **As** an EBAC-SHOP customer <br>  **I want** to add products to my cart <br>  **To** purchase items <br>
+  > **As** an EBAC-SHOP customer <br> **I want** to add products to my cart <br> **To** purchase items <br>
   >
   > **Business rules:**
   >
@@ -23,7 +23,7 @@ Considering the user stories:
   > - Must only accept valid discount coupons.
 
 - **US-0002** - Login to the platform <br>
-  > **As** an EBAC-SHOP customer <br>  **I want** log in to the platform <br>  **To** view my orders <br>
+  > **As** an EBAC-SHOP customer <br> **I want** log in to the platform <br> **To** view my orders <br>
   >
   > **Business rules:**
   >
@@ -31,7 +31,7 @@ Considering the user stories:
   > - An error message must be displayed if the user enters the wrong login and password;
   > - Login must allow e-mail or username.
 - **US-0003** - Voucher API <br>
-  > **As** an EBAC-SHOP admin <br>  **I want** create a voucher service <br>  **To** be able to list and register vouchers <br>
+  > **As** an EBAC-SHOP admin <br> **I want** create a voucher service <br> **To** be able to list and register vouchers <br>
   >
   > **Business rules:**
   >
@@ -56,12 +56,14 @@ Considering the user stories:
 ### Static Test
 
 - Acceptance Criteria <br>
-I chose to use the ***Gherkin*** language to write the acceptance criteria, documentation available at the links below: 
+  I chose to use the **_Gherkin_** language to write the acceptance criteria, documentation available at the links below:
+
   - [**US-0001**](Scenarios/US-0001.feature)
   - [**US-0002**](Scenarios/US-0002.feature)
   - [**US-0003**](Scenarios/US-0003.feature)
 
 - Test Cases
+
   - **US-0001** <br>
     Looking at the requirements: <br>
     a. Do not allow products to be added to the cart above stock availability;<br>
@@ -70,7 +72,7 @@ I chose to use the ***Gherkin*** language to write the acceptance criteria, docu
     ![US001-PEBL](img_readme/US001-PEBL.png)
     <br>
     From there, I wrote the test case for this scenario: <br>
-    
+
     **CT01 - Add products to cart** <br>
     **Description:** Test to validate rules for adding items to the product page <br>
     **Preconditions:** Single product with stock or no stock available <br>
@@ -82,7 +84,7 @@ I chose to use the ***Gherkin*** language to write the acceptance criteria, docu
     4- Click on the Buy button <br>
     **Expected results:** <br>
     ![US0001TC01](img_readme/US001TC01.png)
-    
+
     Finally, for the last business rule: <br>
     c. Must only accept valid discount coupons. <br>
     As this is a boolean rule, I created the test case for coverage in the valid and invalid cases: <br>
@@ -104,13 +106,14 @@ I chose to use the ***Gherkin*** language to write the acceptance criteria, docu
     b. An error message must be displayed if the user enters the wrong login and password; <br>
     c. Login must allow e-mail or username. <br>
     Just to illustrate the login dynamics, I've used the simplified decision tables for each scenario:
+
     - Access with e-mail <br>
-      ![Condition1](img_readme/US002Conditional1.png) 
+      ![Condition1](img_readme/US002Conditional1.png)
     - Access with username <br>
-      ![Condition1](img_readme/US002Conditional2.png) 
-    
+      ![Condition1](img_readme/US002Conditional2.png)
+
     From this, defining the test case: <br>
-    
+
     **CT01 - Login testing** <br>
     **Description:** Test access with email, or username and password <br>
     **Preconditions:** User already registered <br>
@@ -121,11 +124,11 @@ I chose to use the ***Gherkin*** language to write the acceptance criteria, docu
     3- Click on the Login button <br>
     **Expected results:** <br>
     ![US002TC01](img_readme/US002TC01.png)
-    
+
   - **US-0003** <br>
     For this last user story, apart from the indication of fields to fill in, we only have a very simple rule: <br>
     a. Coupon name cannot be repeated. <br>
-    
+
     Visualizing the rule, we have: <br>
     ![US0003Conditional](img_readme/US003Conditional1.png)
 
@@ -152,7 +155,6 @@ I chose to use the ***Gherkin*** language to write the acceptance criteria, docu
 
 - Mobile
 
-  - **US-0001**
   - **US-0002**
 
 - API
@@ -163,6 +165,7 @@ I chose to use the ***Gherkin*** language to write the acceptance criteria, docu
 ## Continuous Integration
 
 ## Tools
+
 <br>
 <a href="https://www.cypress.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/6e46ec1fc23b60c8fd0d2f2ff46db82e16dbd75f/icons/cypress.svg" alt="cypress" width="40" height="40"/> </a> &nbsp;
 <a href="https://www.appium.io/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/appium/appium/master/packages/appium/docs/assets/images/appium-logo-horiz.png" alt="appium" width="180" height="40"/> </a> &nbsp;
