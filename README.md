@@ -148,18 +148,18 @@ Considering the user stories:
 
 ### Dynamic Test
 
-- Web
-  The tests were carried out using the Cypress platform.
-  I chose to use customized commands and also data masses in the fixture folder.
+- Web <br>
+  The tests were carried out using the Cypress platform.<br>
+  I chose to use customized commands and also data masses in the fixture folder.<br>
   Check out the structure in the options:
 
   - [**US-0001**](2_Web_Testing/cypress/e2e/US001)
   - [**US-0002**](2_Web_Testing/cypress/e2e/US002)
 
-- Mobile
-  For the mobile test, I used Appium, with the Webdriver\IO structure.
-  I implemented it for local testing, but I also included a framework for use in Sauce Labs.
-  I opted for a simple login test, with just one spec including all the scenarios, but also using the page objects feature.
+- Mobile <br>
+  For the mobile test, I used Appium, with the Webdriver\IO structure.<br>
+  I implemented it for local testing, but I also included a framework for use in Sauce Labs.<br>
+  I opted for a simple login test, with just one spec including all the scenarios, but also using the page objects feature.<br>
   Check out the structure at the link below:
 
   - [**US-0002**](3_Mobile_Testing/test/specs/US002)
