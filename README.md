@@ -58,9 +58,9 @@ Considering the user stories:
 - Acceptance Criteria <br>
   I chose to use the **_Gherkin_** language to write the acceptance criteria, documentation available at the links below:
 
-  - [**US-0001**](Scenarios/US-0001.feature)
-  - [**US-0002**](Scenarios/US-0002.feature)
-  - [**US-0003**](Scenarios/US-0003.feature)
+  - [**US-0001**](1_Scenarios/US-0001.feature)
+  - [**US-0002**](1_Scenarios/US-0002.feature)
+  - [**US-0003**](1_Scenarios/US-0003.feature)
 
 - Test Cases
 
@@ -149,18 +149,36 @@ Considering the user stories:
 ### Dynamic Test
 
 - Web
+  The tests were carried out using the Cypress platform.
+  I chose to use customized commands and also data masses in the fixture folder.
+  Check out the structure in the options:
 
-  - **US-0001**
-  - **US-0002**
+  - [**US-0001**](2_Web_Testing\cypress\e2e\US001)
+  - [**US-0002**](2_Web_Testing\cypress\e2e\US002)
 
 - Mobile
+  For the mobile test, I used Appium, with the Webdriver\IO structure.
+  I implemented it for local testing, but I also included a framework for use in Sauce Labs.
+  I opted for a simple login test, with just one spec including all the scenarios, but also using the page objects feature.
+  Check out the structure at the link below:
 
-  - **US-0002**
+  - [**US-0002**](3_Mobile_Testing\test\specs\US002)
 
 - API
   - **US-0003**
 
 ## Performance Testing
+
+This test was carried out using Jmeter, testing performance with the login flow.
+
+Performance test configurations:
+
+- Virtual users: 20
+- Execution time: 2 minutes
+- RampUp: 20 seconds
+- Data mass: User / password
+
+Check out the configuration [here](4_Performance_Testing).
 
 ## Continuous Integration
 
