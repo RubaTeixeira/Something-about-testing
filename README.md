@@ -153,8 +153,8 @@ Considering the user stories:
   I chose to use customized commands and also data masses in the fixture folder.
   Check out the structure in the options:
 
-  - [**US-0001**](2_Web_Testing\cypress\e2e\US001)
-  - [**US-0002**](2_Web_Testing\cypress\e2e\US002)
+  - [**US-0001**](2_Web_Testing/cypress/e2e/US001)
+  - [**US-0002**](2_Web_Testing/cypress/e2e/US002)
 
 - Mobile
   For the mobile test, I used Appium, with the Webdriver\IO structure.
@@ -162,7 +162,7 @@ Considering the user stories:
   I opted for a simple login test, with just one spec including all the scenarios, but also using the page objects feature.
   Check out the structure at the link below:
 
-  - [**US-0002**](3_Mobile_Testing\test\specs\US002)
+  - [**US-0002**](3_Mobile_Testing/test/specs/US002)
 
 - API
   - **US-0003**
