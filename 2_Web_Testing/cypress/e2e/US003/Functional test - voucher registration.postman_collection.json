@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "cc6bd0ba-7694-4d0c-bc51-4dd7b04834e0",
+		"name": "Functional test - voucher registration",
+		"description": "Test to verify the functionality of the process of registering new vouchers in the API.\n\nBased on the user story:  \n**As** an EBAC-SHOP admin  \n**I want** create a voucher service  \n**To** be able to list and register vouchers\n\n**Business rules:**\n\n- You must register the vouchers with the mandatory fields below:\n    \n    - Voucher code\n        \n    - Value\n        \n    - Discount type\n        \n    - Description\n        \n- Coupon name cannot be repeated\n    \n\n**Test mindmap**\n\n<img src=\"https://content.pstmn.io/68f7e47e-b566-4a1f-9a3c-e38bb20a136e/VVMtMDAwMy5wbmc=\">\n\n**Expected results:**\n\n- Successful registration of new voucher\n    \n- Do not allow registration of a voucher with an existing name.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22996953"
+	},
+	"item": [
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "List_coupons",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful access to the list\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/wc/v3/coupons",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wc",
+								"v3",
+								"coupons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reg_new_coupon",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code of the new record\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"pm.variables.get(\"id\");\r",
+									"pm.test(\"Store coupon id\", function () {\r",
+									"    let response = pm.response.json();\r",
+									"    let id = response.id;\r",
+									"    pm.environment.set(\"id\", id);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"vouchertestjun24\",\r\n    \"amount\": \"10\",\r\n    \"discount_type\": \"percent\",\r\n    \"description\": \"Test discount voucher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/wc/v3/coupons",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wc",
+								"v3",
+								"coupons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check_new_coupon",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check requisition status code\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Confirm registration of new voucher\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"vouchertestjun24\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/wc/v3/coupons/{{id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wc",
+								"v3",
+								"coupons",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reg_existing_name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400 - Bad Request\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Confirm existing coupon message\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"O código de cupom já existe\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"vouchertestjun24\",\r\n    \"amount\": \"10\",\r\n    \"discount_type\": \"percent\",\r\n    \"description\": \"Cupom de desconto de teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/wc/v3/coupons",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"wc",
+								"v3",
+								"coupons"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{psswrdAPI}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{admUser}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
