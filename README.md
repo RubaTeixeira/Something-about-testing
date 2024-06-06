@@ -1,10 +1,8 @@
 # Something about testing
 
-:construction: Project in progress :construction:
-
 ## Abstract
 
-The main objective of this project is to show my skills in static and dynamic testing processes, based on an activity proposed in the Software Testing course at EBAC.
+The main objective of this project is to show my skills in static and dynamic testing processes, based on the activities proposed in the Software Testing course at EBAC.
 
 About the course, [click here](https://ebaconline.com.br/qualidade-de-software)
 
@@ -164,8 +162,9 @@ Considering the user stories:
 
   - [**US-0002**](3_Mobile_Testing/test/specs/US002)
 
-- API
-  - **US-0003**
+- API <br>
+  API tests were carried out using Postman and Cypress, the configuration and code files are in the link below.
+  - [**US-0003**](2_Web_Testing/cypress/e2e/US003)
 
 ## Performance Testing
 
@@ -180,8 +179,6 @@ Performance test configurations:
 
 Check out the configuration [here](4_Performance_Testing).
 
-## Continuous Integration
-
 ## Tools
 
 <br>
@@ -191,4 +188,3 @@ Check out the configuration [here](4_Performance_Testing).
 <a href="https://saucelabs.com/" target="_blank" rel="noreferrer"> <img src="https://saucelabs.com/images/logo.svg" alt="saucelabs" width="180" height="40"/> </a> &nbsp;
 <a href="https://https://jmeter.apache.org/" target="_blank" rel="noreferrer"> <img src="https://jmeter.apache.org/images/logo.svg" alt="jmeter" width="120" height="40"/> </a> &nbsp;
 <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> &nbsp;
-<a href="https://www.jenkins.io" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="jenkins" width="40" height="40"/> </a> &nbsp;
