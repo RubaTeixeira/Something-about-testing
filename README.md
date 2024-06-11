@@ -185,7 +185,7 @@ Check out the configuration [here](4_Performance_Testing).
 <br>
 <a href="https://cucumber.io/" target="_blank" rel="noreferrer"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoiEs8iInyRBbmwwGExDQDBF77BJ-Ok54tpxjIHyUxGw&s" alt="cucumber" width="40" height="40"/> </a> &nbsp;
 <a href="https://www.cypress.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/6e46ec1fc23b60c8fd0d2f2ff46db82e16dbd75f/icons/cypress.svg" alt="cypress" width="40" height="40"/> </a> &nbsp;
-<a href="https://www.appium.io/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/appium/appium/master/packages/appium/docs/assets/images/appium-logo-horiz.png" alt="appium" width="180" height="40"/> </a> &nbsp;
+<a href="https://www.appium.io/" target="_blank" rel="noreferrer"> <img src="https://appium.io/docs/en/latest/assets/images/appium-logo-horiz.png" alt="appium" width="180" height="40"/> </a> &nbsp;
 <a href="https://saucelabs.com/" target="_blank" rel="noreferrer"> <img src="https://saucelabs.com/images/logo.svg" alt="saucelabs" width="180" height="40"/> </a> &nbsp;
 <a href="https://https://jmeter.apache.org/" target="_blank" rel="noreferrer"> <img src="https://jmeter.apache.org/images/logo.svg" alt="jmeter" width="120" height="40"/> </a> &nbsp;
 <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> &nbsp;
