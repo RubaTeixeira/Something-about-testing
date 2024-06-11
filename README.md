@@ -163,8 +163,9 @@ Considering the user stories:
   - [**US-0002**](3_Mobile_Testing/test/specs/US002)
 
 - API <br>
-  API tests were carried out using Postman and Cypress, the configuration and code files are in the link below.
-  - [**US-0003**](2_Web_Testing/cypress/e2e/US003)
+  For user story **US-0003**, the API tests were carried out using Postman and Cypress, the configuration and code files are in the links below.
+  - [**Cypress**](2_Web_Testing/cypress/e2e/US003)
+  - [**Postman**](https://documenter.getpostman.com/view/22996953/2sA3XMjP3N)
 
 ## Performance Testing
 
